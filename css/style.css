@@ -91,6 +91,12 @@ header .right .menu li a:hover {
   color: #c32b78;
 }
 
+@media (max-width: 1024px) {
+  header .right .menu li a {
+    margin: 0 10px;
+  }
+}
+
 header .right .login {
   display: inline-block;
   margin-left: 20px;
@@ -112,6 +118,13 @@ header .right .login:hover {
   color: #c32b78;
 }
 
+header .right .menu_btn {
+  float: right;
+  margin: 5px 0 0 10px;
+  cursor: pointer;
+  display: none;
+}
+
 .banner {
   width: 100%;
   float: left;
@@ -131,6 +144,13 @@ header .right .login:hover {
   font-size: 40px;
   margin: 15px 0 30px;
   font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .banner h1 {
+    font-size: 35px;
+    margin: 14px 0 26px;
+  }
 }
 
 .banner h6 {
@@ -236,8 +256,14 @@ header .right .login:hover {
   margin-bottom: 20px;
 }
 
-.partner ul li {
-  display: inline-block;
+.partner ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .media_info {
@@ -367,8 +393,8 @@ header .right .login:hover {
 
 .company ul .owl-nav .owl-prev {
   position: absolute;
-  left: -30px;
-  top: 30px;
+  left: -15px;
+  top: 33px;
 }
 
 .company ul .owl-nav .owl-prev span {
@@ -377,8 +403,8 @@ header .right .login:hover {
 
 .company ul .owl-nav .owl-next {
   position: absolute;
-  right: -30px;
-  top: 30px;
+  right: -15px;
+  top: 33px;
 }
 
 .company ul .owl-nav .owl-next span {
@@ -421,5 +447,151 @@ footer .social li a {
   color: #ffffff;
   background: #334075;
   text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  h3 {
+    font-size: 30px;
+  }
+  .partner {
+    margin: 50px 0 80px;
+  }
+  .company {
+    padding: 30px 0;
+  }
+  .company ul {
+    padding: 0 15px;
+  }
+  .company ul .owl-nav .owl-prev {
+    left: -5px;
+  }
+  .company ul .owl-nav .owl-next {
+    right: -5px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  h3 {
+    font-size: 26px;
+  }
+  header .logo {
+    font-size: 26px;
+    margin-top: 2px;
+  }
+  header .right .menu {
+    display: block;
+    position: fixed;
+    top: 69px;
+    width: 100%;
+    display: none;
+    z-index: 9;
+    left: 0;
+    background: #c32b78;
+  }
+  header .right .menu li {
+    width: 100%;
+  }
+  header .right .menu li a {
+    margin: 0;
+    padding: 12px 15px;
+    color: #ffffff;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+  }
+  header .right .menu li a:hover {
+    color: #ffffff;
+    background: #182865;
+  }
+  header .right .login {
+    width: 120px;
+    line-height: 35px;
+  }
+  header .right .menu_btn {
+    display: block;
+  }
+  .banner {
+    padding: 50px 0px;
+  }
+  .banner small, .banner h6 {
+    font-size: 16px;
+  }
+  .banner h1 {
+    font-size: 30px;
+    margin: 13px 0 20px;
+  }
+  .serach_outer {
+    margin-top: 0;
+  }
+  .serach_outer .wrap {
+    max-width: 100%;
+    padding: 0;
+  }
+  .serach_outer .wrap .serach_box {
+    border-radius: 0;
+    padding: 20px;
+    background: #f0f3ff;
+  }
+  .serach_outer .wrap .serach_box .input_box {
+    width: 100%;
+  }
+  .serach_outer .wrap .serach_box .input_box input[type="text"] {
+    background: #f0f3ff;
+  }
+  .serach_outer .wrap .serach_box .mid {
+    padding: 15px 0 0 0px;
+    border-top: 1px dashed #182865;
+    margin: 15px 0;
+  }
+  .serach_outer .wrap .serach_box .mid:before {
+    display: none;
+  }
+  .serach_outer .wrap .serach_box .right {
+    width: 100%;
+  }
+  .serach_outer .wrap .serach_box .right input[type="submit"] {
+    width: 100%;
+  }
+  .partner {
+    margin: 40px 0;
+  }
+  .media_info {
+    margin-bottom: 50px;
+  }
+  .media_info .info_cell {
+    width: 50%;
+    padding: 0 10px;
+  }
+  .success {
+    background: #f0f3ff;
+    padding: 40px 0 10px;
+  }
+  .success:after {
+    display: none;
+  }
+  .success .outer .success_sec {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .company {
+    padding: 30px 0 10px;
+  }
+  .company h3 {
+    margin-bottom: 20px;
+  }
+  .company ul li {
+    padding: 0 10px;
+  }
+  footer {
+    text-align: center;
+  }
+  footer .left {
+    width: 100%;
+  }
+  footer .left p {
+    margin: 10px 0;
+  }
+  footer .social {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

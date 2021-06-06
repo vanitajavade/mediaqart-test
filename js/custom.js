@@ -11,11 +11,15 @@ $(document).ready(function(){
                 items:2
             },
             600:{
-                items:3
+                items:4
             },
             992:{
                 items:6
             }
         }
+    });
+
+    $('.menu_btn').click(function(){
+        $('.menu').slideToggle(200);
     });
 });

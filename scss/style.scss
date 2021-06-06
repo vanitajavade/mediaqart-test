@@ -57,6 +57,9 @@ header{
                     &:hover{
                         color: $text-pink;
                     }
+                    @media (max-width:1024px){
+                      margin:0 10px;
+                    }  
                 }
             }
         }
@@ -69,6 +72,12 @@ header{
                 background: none;
                 color: $text-pink;
             }
+        }
+        .menu_btn{
+            float:right;
+            margin:5px 0 0 10px;
+            cursor: pointer;
+            display:none;
         }
     }
 }
@@ -88,6 +97,10 @@ header{
         font-size: 40px;
         margin: 15px 0 30px;
         font-weight: 700;
+        @media (max-width:1024px){
+            font-size: 35px;
+            margin: 14px 0 26px;
+        } 
     }
     h6{
         font-size:20px;
@@ -170,9 +183,9 @@ header{
         margin-bottom: 20px;
     }
     ul{
-        li{
-            display: inline-block;
-        }
+        width:100%;
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -275,16 +288,16 @@ header{
             color: $bg-blue;
             .owl-prev{
                 position: absolute;
-                left: -30px;
-                top: 30px;
+                left: -15px;
+                top: 33px;
                 span{
                     font-size: 30px;
                 }
             }
             .owl-next{
                 position: absolute;
-                right: -30px;
-                top: 30px;
+                right: -15px;
+                top: 33px;
                 span{
                     font-size: 30px;
                 }
@@ -322,6 +335,167 @@ footer{
                 background: #334075;
                 text-align: center;
             }
+        }
+    }
+}
+
+@media only screen and (max-width:1024px){
+    h3{font-size:30px;}
+    .partner{
+        margin:50px 0 80px;
+    }
+    .company{
+        padding:30px 0;
+        ul{
+            padding:0 15px;
+            .owl-nav{
+                .owl-prev{
+                    left:-5px;
+                }
+                .owl-next{
+                    right:-5px;
+                }
+            } 
+        }
+    }
+}
+
+@media only screen and (max-width:767px){
+    h3 {
+        font-size: 26px;
+    }
+
+    header{
+        .logo{
+            font-size: 26px;
+            margin-top: 2px;
+        }
+        .right{
+            .menu{
+                display: block;
+                position: fixed;
+                top: 69px;
+                width:100%;
+                display:none;
+                z-index: 9;
+                left:0;
+                background: $bg-pink;
+                li{
+                    width: 100%;
+                    a{
+                        margin: 0;
+                        padding: 12px 15px;
+                        color:$text-white;
+                        border-top: 1px solid rgba($color: #fff, $alpha: 0.5);
+                        font-weight: 400;
+                        &:hover{
+                            color:$text-white;
+                            background: $bg-blue;
+                        }
+                    }
+                }
+            }
+            .login{
+                width: 120px;
+                line-height: 35px;
+            }
+            .menu_btn{
+                display:block;
+            }
+        }
+    }
+
+    .banner{
+        padding: 50px 0px;
+        small, h6{
+            font-size:16px;
+        }
+        h1{
+            font-size: 30px;
+            margin: 13px 0 20px;
+        }
+    }
+
+    .serach_outer{
+        margin-top:0;
+        .wrap{
+            max-width: 100%;
+            padding: 0;
+            .serach_box{
+                border-radius:0;
+                padding:20px;
+                background: #f0f3ff;
+                .input_box{
+                    width:100%;
+                    input[type="text"]{
+                        background: #f0f3ff;
+                    }   
+                }
+                .mid{
+                    padding: 15px 0 0 0px;
+                    border-top: 1px dashed #182865;
+                    margin: 15px 0;
+                    &:before{
+                        display:none;
+                    }   
+                } 
+                .right{
+                    width:100%;
+                    input[type="submit"]{
+                        width:100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .partner{
+        margin:40px 0;
+    }
+    .media_info {
+        margin-bottom:50px;
+        .info_cell{
+            width: 50%;
+            padding:0 10px;
+        }
+    }
+
+    .success{
+        background: #f0f3ff;
+        padding:40px 0 10px;
+        &:after{
+            display:none;
+        }
+        .outer {
+            .success_sec{
+                width:100%;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .company{
+        padding:30px 0 10px;
+        h3{
+            margin-bottom:20px;
+        }
+         ul{ 
+            li{
+                padding:0 10px;
+            }
+        }
+    }
+
+    footer{
+        text-align: center;
+        .left{
+            width:100%;
+            p{
+                margin: 10px 0;
+            }
+        }
+        .social{
+            width:100%;
         }
     }
 }
